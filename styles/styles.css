@@ -30,9 +30,18 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Main Image (REQUIRED RULE) */
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 3px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
 /* Aside Section */
 aside {
-    width: 30em; /* increased from 20em */
+    width: 30em;
     margin: 1em auto;
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 1em;
@@ -42,15 +51,13 @@ aside {
     border-radius: 6px;
 }
 
-/* Aside Image */
+/* Aside Image (REQUIRED SIZE) */
 aside img {
-    width: 100%;          /* fills the aside container */
-    max-width: 500px;     /* prevents it from becoming too huge */
+    width: 200px;
     height: auto;
     border: 1px solid #ccc;
-    padding: 4px;
+    padding: 3px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border-radius: 6px;
 }
 
 /* General Images */
@@ -62,9 +69,10 @@ img {
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     border-radius: 4px;
 }
+
 /* Paragraphs */
 p {
-    padding: 10px;
+    padding: 0;
     line-height: 1.6;
 }
 
