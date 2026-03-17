@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 :root {
     --primary-color: #0b3d91;
     --primary-dark: #082c6c;
-    --text-light: white;
-    --text-dark: #333;
+    --text-light: #ffffff;
+    --text-dark: #333333;
     --background-light: #f2f2f2;
 
     --border-color: #ccc;
@@ -11,15 +18,7 @@
 
     --padding-small: 12px;
     --padding-medium: 20px;
-    --border-radius: 4px;
-}
-
-/* Main Layout */
-main {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: var(--padding-medium);
-    text-align: center;
+    --border-radius: 6px;
 }
 
 /* Navigation */
@@ -31,66 +30,125 @@ nav {
 
 nav a {
     color: var(--text-light);
-    display: block;
-    padding: var(--padding-small);
+    display: inline-block;
+    margin: 0 10px;
     text-decoration: none;
     font-weight: 500;
+    padding: 5px 10px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     background-color: var(--primary-dark);
+    border-radius: var(--border-radius);
 }
 
-/* Heading */
-h1 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-/* Main Image */
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--border-color);
-    padding: 3px;
-    box-shadow: var(--shadow-light);
-}
-
-/* Aside Section */
-aside {
-    width: 30em;
-    margin: 1em auto;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 1em;
-    background-color: var(--background-light);
-    color: var(--text-dark);
+/* Hero Section */
+.hero {
     text-align: center;
-    border-radius: 6px;
+    margin: 2rem 0;
 }
 
-/* Aside Image */
-aside img {
+.hero .profile-img {
     width: 200px;
-    height: auto;
-    border: 1px solid var(--border-color);
-    padding: 3px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
     box-shadow: var(--shadow-medium);
 }
 
-/* General Images */
-img {
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--border-color);
-    padding: 3px;
-    box-shadow: var(--shadow-light);
+.hero .hero-text {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Main Layout */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: var(--padding-medium);
+}
+
+/* About Section */
+.about h2,
+.temples h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Temple Links */
+.temple-list {
+    list-style: none;
+    padding: 0;
+}
+
+.temple-list li {
+    margin: 0.5rem 0;
+}
+
+.temple-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.temple-list a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Aside Section */
+aside.contact-box {
+    width: 30em;
+    margin: 2rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: var(--padding-medium);
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    text-align: center;
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+aside.contact-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+aside.contact-box img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-medium);
+}
+
+aside.contact-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside.contact-box li {
+    margin: 0.5rem 0;
+}
+
+aside.contact-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+aside.contact-box a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 /* Paragraphs */
 p {
-    padding: 0;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -98,7 +156,16 @@ footer {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
-    padding: var(--padding-small);
-    margin-top: var(--padding-medium);
+    padding: var(--padding-medium);
+    margin-top: 2rem;
     border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Box class (general purpose) */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    background-color: #ccc;
+    color: black;
 }
