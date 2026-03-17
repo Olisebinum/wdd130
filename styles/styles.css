@@ -1,42 +1,59 @@
+:root {
+    --primary-color: #0b3d91;
+    --primary-dark: #082c6c;
+    --text-light: white;
+    --text-dark: #333;
+    --background-light: #f2f2f2;
+
+    --border-color: #ccc;
+    --shadow-light: 0 3px 10px rgba(0, 0, 0, 0.15);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    --padding-small: 12px;
+    --padding-medium: 20px;
+    --border-radius: 4px;
+}
+
+/* Main Layout */
 main {
     max-width: 840px;
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--padding-medium);
     text-align: center;
 }
 
 /* Navigation */
 nav {
-    background-color: #0b3d91;
-    padding: 12px;
+    background-color: var(--primary-color);
+    padding: var(--padding-small);
     text-align: center;
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     display: block;
-    padding: 12px;
+    padding: var(--padding-small);
     text-decoration: none;
     font-weight: 500;
 }
 
 nav a:hover {
-    background-color: #082c6c;
+    background-color: var(--primary-dark);
 }
 
 /* Heading */
 h1 {
-    color: #0b3d91;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-/* Main Image (REQUIRED RULE) */
+/* Main Image */
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 3px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-light);
 }
 
 /* Aside Section */
@@ -45,29 +62,29 @@ aside {
     margin: 1em auto;
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 1em;
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: var(--background-light);
+    color: var(--text-dark);
     text-align: center;
     border-radius: 6px;
 }
 
-/* Aside Image (REQUIRED SIZE) */
+/* Aside Image */
 aside img {
     width: 200px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 3px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-medium);
 }
 
 /* General Images */
 img {
     width: 150px;
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 3px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    border-radius: 4px;
+    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
 }
 
 /* Paragraphs */
@@ -78,10 +95,10 @@ p {
 
 /* Footer */
 footer {
-    background-color: #0b3d91;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
-    padding: 12px;
-    margin-top: 20px;
+    padding: var(--padding-small);
+    margin-top: var(--padding-medium);
     border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
