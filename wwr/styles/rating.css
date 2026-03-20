@@ -17,7 +17,9 @@
 /* =========================
    CSS RESET (REQUIRED)
 ========================= */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,6 +31,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.6;
 }
 
 /* =========================
@@ -57,7 +60,7 @@ nav,
 p,
 section,
 article {
-    margin: 16px;
+    margin: 16px 0;
     padding: 8px;
 }
 
@@ -70,6 +73,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    padding: 8px 16px;
 }
 
 header img {
@@ -126,6 +130,7 @@ nav a:hover {
     left: 20px;
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px;
 }
 
 /* Article image (REQUIRED FLOAT) */
@@ -133,6 +138,7 @@ nav a:hover {
     float: right;
     width: 125px;
     margin-left: 10px;
+    margin-bottom: 8px;
 }
 
 /* =========================
@@ -142,6 +148,22 @@ section {
     text-align: center;
 }
 
+/* Style call-to-action button */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: var(--accent2-color);
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -149,11 +171,13 @@ footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
+    padding: 16px 0;
 }
 
 /* Remove underline from social icons (REQUIRED) */
 .socialmedia a {
     text-decoration: none;
+    display: inline-block;
 }
 
 /* Space icons nicely */
