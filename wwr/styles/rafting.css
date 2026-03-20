@@ -4,8 +4,8 @@
 :root {
     --primary-color: #0B3C5D;
     /* deep river blue */
-    --secondary-color: #328CC1;
-    /* lighter blue */
+    --secondary-color: #276A9A;
+    /* darker blue for proper contrast */
     --accent1-color: #1D2731;
     /* dark tone */
     --accent2-color: #D9B310;
@@ -148,12 +148,13 @@ section {
     text-align: center;
 }
 
-/* Style call-to-action button */
+/* Style call-to-action button with proper contrast */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
     background-color: var(--secondary-color);
+    /* darker for contrast */
     color: white;
     text-decoration: none;
     font-weight: bold;
