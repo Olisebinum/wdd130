@@ -1,0 +1,162 @@
+/* =========================
+   CSS VARIABLES (REQUIRED)
+========================= */
+:root {
+    --primary-color: #0B3C5D;
+    /* deep river blue */
+    --secondary-color: #328CC1;
+    /* lighter blue */
+    --accent1-color: #1D2731;
+    /* dark tone */
+    --accent2-color: #D9B310;
+    /* golden highlight */
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CSS RESET (REQUIRED)
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY STYLING (REQUIRED)
+========================= */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* =========================
+   PAGE WIDTH (REQUIRED)
+========================= */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADINGS (REQUIRED)
+========================= */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* =========================
+   SPACING (REQUIRED)
+========================= */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* =========================
+   HEADER + NAV
+========================= */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+header img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+/* =========================
+   HERO SECTION (REQUIRED)
+========================= */
+.hero {
+    position: relative;
+}
+
+/* Hero image fills container */
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero title overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--accent1-color);
+    color: white;
+}
+
+/* Article overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Article image (REQUIRED FLOAT) */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 10px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+/* Remove underline from social icons (REQUIRED) */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Space icons nicely */
+.socialmedia img {
+    margin: 0 8px;
+}
