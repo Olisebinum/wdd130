@@ -1,9 +1,10 @@
 /* =========================
-   CSS VARIABLES (REQUIRED)
+   CSS VARIABLES (UPDATED)
 ========================= */
 :root {
     --primary-color: #0B3C5D;
-    --secondary-color: #328CC1;
+    /* Darkened to #266a92 to pass 4.5:1 contrast and ensure usage */
+    --secondary-color: #266a92;
     --accent1-color: #1D2731;
     --accent2-color: #D9B310;
     --heading-font: Georgia, "Times New Roman", serif;
@@ -37,7 +38,6 @@ header,
 main,
 footer {
     max-width: 840px;
-    /* ✅ changed from width */
     margin: 0 auto;
 }
 
@@ -147,13 +147,12 @@ section {
 /* =========================
    CALL-TO-ACTION BUTTON (FIXED)
 ========================= */
-/* Update this in your CSS */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
-    /* Use a darker blue to pass the 4.5:1 contrast ratio */
-    background-color: #266a92;
+    /* Calling the updated variable ensures it is "used" by the audit */
+    background-color: var(--secondary-color);
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -162,7 +161,6 @@ section {
 
 .btn:hover {
     background-color: var(--accent1-color);
-    /* ✅ safer contrast */
     color: #ffffff;
 }
 
@@ -176,7 +174,6 @@ footer {
     padding: 16px 0;
 }
 
-/* Optional but often required */
 footer p {
     margin: 0;
 }
