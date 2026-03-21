@@ -3,16 +3,19 @@
 ========================= */
 :root {
     --primary-color: #0B3C5D;
-    /* Darkened to #266a92 to pass 4.5:1 contrast and ensure usage */
+    /* Dark navy */
     --secondary-color: #266a92;
+    /* Adjusted for contrast */
     --accent1-color: #1D2731;
+    /* Deep gray */
     --accent2-color: #D9B310;
+    /* Gold accent */
     --heading-font: Georgia, "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
 /* =========================
-   CSS RESET (REQUIRED)
+   CSS RESET
 ========================= */
 *,
 *::before,
@@ -23,16 +26,17 @@
 }
 
 /* =========================
-   BODY STYLING (REQUIRED)
+   BODY
 ========================= */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     line-height: 1.6;
+    background-color: #fff;
 }
 
 /* =========================
-   PAGE WIDTH (REQUIRED)
+   PAGE WIDTH
 ========================= */
 header,
 main,
@@ -42,7 +46,7 @@ footer {
 }
 
 /* =========================
-   HEADINGS (REQUIRED)
+   HEADINGS
 ========================= */
 h1,
 h2 {
@@ -51,7 +55,7 @@ h2 {
 }
 
 /* =========================
-   SPACING (REQUIRED)
+   SPACING
 ========================= */
 p,
 section,
@@ -89,25 +93,26 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: var(--accent2-color);
+    text-decoration: underline;
+    /* Accessible indicator */
 }
 
 /* =========================
-   HERO SECTION (REQUIRED)
+   HERO SECTION
 ========================= */
 .hero {
     position: relative;
 }
 
-/* Main hero image only */
 .hero > img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* Hero title overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -119,7 +124,6 @@ nav a:hover {
     color: white;
 }
 
-/* Article overlay */
 .hero article {
     position: absolute;
     bottom: 20px;
@@ -129,7 +133,6 @@ nav a:hover {
     padding: 12px;
 }
 
-/* Article image (REQUIRED FLOAT) */
 .hero article img {
     float: right;
     width: 125px;
@@ -145,27 +148,43 @@ section {
 }
 
 /* =========================
-   CALL-TO-ACTION BUTTON (RE-FIXED)
+   CALL-TO-ACTION BUTTON
 ========================= */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
     background-color: var(--secondary-color);
-    /* This is your #266a92 */
     color: white;
-    /* Forced to white */
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
     border: 1px solid var(--secondary-color);
-    /* Added to force background recognition */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: var(--accent1-color);
     color: white;
     border-color: var(--accent1-color);
+    text-decoration: underline;
+    /* Accessible indicator */
+}
+
+.btn:active {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border-color: var(--primary-color);
+}
+
+.btn:disabled,
+.btn[disabled] {
+    background-color: #b0b0b0;
+    color: #f5f5f5;
+    border-color: #b0b0b0;
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 
 /* =========================
