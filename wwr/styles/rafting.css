@@ -145,23 +145,27 @@ section {
 }
 
 /* =========================
-   CALL-TO-ACTION BUTTON (FIXED)
+   CALL-TO-ACTION BUTTON (RE-FIXED)
 ========================= */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
-    /* Calling the updated variable ensures it is "used" by the audit */
     background-color: var(--secondary-color);
-    color: #ffffff;
+    /* This is your #266a92 */
+    color: white;
+    /* Forced to white */
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    /* Added to force background recognition */
 }
 
 .btn:hover {
     background-color: var(--accent1-color);
-    color: #ffffff;
+    color: white;
+    border-color: var(--accent1-color);
 }
 
 /* =========================
