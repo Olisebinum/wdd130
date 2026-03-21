@@ -147,13 +147,14 @@ section {
 /* =========================
    CALL-TO-ACTION BUTTON (FIXED)
 ========================= */
+/* Update this in your CSS */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
-    background-color: var(--secondary-color);
+    /* Use a darker blue to pass the 4.5:1 contrast ratio */
+    background-color: #266a92;
     color: #ffffff;
-    /* ✅ force high contrast */
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
