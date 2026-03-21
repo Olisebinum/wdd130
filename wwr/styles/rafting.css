@@ -3,13 +3,9 @@
 ========================= */
 :root {
     --primary-color: #0B3C5D;
-    /* deep river blue */
     --secondary-color: #328CC1;
-    /* lighter blue */
     --accent1-color: #1D2731;
-    /* dark tone */
     --accent2-color: #D9B310;
-    /* golden highlight */
     --heading-font: Georgia, "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -40,7 +36,8 @@ body {
 header,
 main,
 footer {
-    width: 840px;
+    max-width: 840px;
+    /* ✅ changed from width */
     margin: 0 auto;
 }
 
@@ -56,7 +53,6 @@ h2 {
 /* =========================
    SPACING (REQUIRED)
 ========================= */
-nav,
 p,
 section,
 article {
@@ -104,8 +100,8 @@ nav a:hover {
     position: relative;
 }
 
-/* Hero image fills container */
-.hero img {
+/* Main hero image only */
+.hero > img {
     display: block;
     width: 100%;
     height: auto;
@@ -149,26 +145,24 @@ section {
 }
 
 /* =========================
-   CALL-TO-ACTION BUTTON (FIXED CONTRAST)
+   CALL-TO-ACTION BUTTON (FIXED)
 ========================= */
 .btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 8px;
     background-color: var(--secondary-color);
-    /* lighter blue */
-    color: white;
-    /* FIXED: white ensures high contrast */
+    color: #ffffff;
+    /* ✅ force high contrast */
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
 }
 
 .btn:hover {
-    background-color: var(--accent2-color);
-    /* golden highlight */
-    color: var(--accent1-color);
-    /* ensures contrast on hover */
+    background-color: var(--accent1-color);
+    /* ✅ safer contrast */
+    color: #ffffff;
 }
 
 /* =========================
@@ -181,13 +175,19 @@ footer {
     padding: 16px 0;
 }
 
-/* Remove underline from social icons (REQUIRED) */
+/* Optional but often required */
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
 .socialmedia a {
     text-decoration: none;
     display: inline-block;
 }
 
-/* Space icons nicely */
 .socialmedia img {
     margin: 0 8px;
 }
