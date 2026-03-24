@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* Variables */
 :root {
     --primary-color: #0b3d91;
     --primary-dark: #082c6c;
@@ -21,20 +23,33 @@
     --border-radius: 6px;
 }
 
+/* Shared Layout */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 /* Navigation */
 nav {
     background-color: var(--primary-color);
     padding: var(--padding-small);
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: var(--text-light);
-    display: inline-block;
-    margin: 0 10px;
+    display: block;
+    /* block for better clickable area */
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-light);
     transition: 0.3s;
 }
 
@@ -54,6 +69,11 @@ nav a:hover {
     border-radius: 50%;
     border: 3px solid var(--primary-color);
     box-shadow: var(--shadow-medium);
+    transition: 0.3s;
+}
+
+.hero .profile-img:hover {
+    transform: scale(1.05);
 }
 
 .hero .hero-text {
@@ -62,46 +82,36 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Main Layout */
+/* Heading h1 bottom border */
+h1 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    /* aside | main */
+    align-items: start;
+    gap: 1rem;
+}
+
+/* Main Section */
 main {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: var(--padding-medium);
+    grid-column: 2 / 3;
+    margin: 1rem 0;
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
 }
 
-/* About Section */
-.about h2,
-.temples h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Temple Links */
-.temple-list {
-    list-style: none;
-    padding: 0;
-}
-
-.temple-list li {
-    margin: 0.5rem 0;
-}
-
-.temple-list a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.temple-list a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-/* Aside Section */
+/* Aside / Contact */
 aside.contact-box {
-    width: 30em;
-    margin: 2rem auto;
+    width: 100%;
+    max-width: 20rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 2rem 0;
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: var(--padding-medium);
     background-color: var(--background-light);
@@ -126,7 +136,6 @@ aside.contact-box img {
 
 aside.contact-box ul {
     list-style: none;
-    padding: 0;
 }
 
 aside.contact-box li {
@@ -141,6 +150,34 @@ aside.contact-box a {
 }
 
 aside.contact-box a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* About & Temples */
+.about h2,
+.temples h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Temple Links */
+.temple-list {
+    list-style: none;
+}
+
+.temple-list li {
+    margin: 0.5rem 0;
+}
+
+.temple-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.temple-list a:hover {
     color: var(--primary-dark);
     text-decoration: underline;
 }
@@ -161,11 +198,11 @@ footer {
     border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Box class (general purpose) */
+/* Utility Box */
 .box {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 1rem;
-    background-color: #ccc;
+    background-color: #e6e6e6;
     color: black;
 }
