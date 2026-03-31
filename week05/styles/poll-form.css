@@ -1,0 +1,134 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    color: #1e3a8a;
+    font-size: 2rem;
+}
+
+/* Form */
+form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: grid;
+    gap: 20px;
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid #bbb;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+/* Legend */
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+/* Form layout */
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+/* Column layouts */
+.column1 {
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 10px;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+}
+
+/* Button */
+button {
+    width: 160px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #3b82f6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+label[for="feedback"] {
+    text-align: center;
+    grid-column: 1 / -1;
+}
