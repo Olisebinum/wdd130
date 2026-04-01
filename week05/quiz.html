@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+
+    <style>
+        /* Optional helper for accessibility */
+        .visually-hidden {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="box">
+        <h1>✅ Basic HTML and CSS Quiz</h1>
+
+        <form action="#" method="post">
+
+            <!-- Question 1 -->
+            <fieldset class="quiz-item box">
+                <legend>1. What does the acronym CSS stand for?</legend>
+                <label for="q1" class="visually-hidden">CSS meaning</label>
+                <input type="text" id="q1" name="q1" placeholder="Enter your answer here" required>
+            </fieldset>
+
+            <!-- Question 2 -->
+            <fieldset class="quiz-item box">
+                <legend>2. How are ID and class attributes selected in CSS?</legend>
+                <label for="q2" class="visually-hidden">CSS selectors explanation</label>
+                <textarea id="q2" name="q2" rows="4" placeholder="Explain your answer..."
+                  required></textarea>
+            </fieldset>
+
+            <!-- Question 3 -->
+            <fieldset class="quiz-item box">
+                <legend>3. Which of the following is a valid CSS comment?</legend>
+                <label for="q3" class="visually-hidden">CSS comment choice</label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled hidden>Choose one...</option>
+                    <option value="a">&lt;!-- This is a comment --&gt;</option>
+                    <option value="b">/* This is a comment */</option>
+                    <option value="c">// This is a comment //</option>
+                </select>
+            </fieldset>
+
+            <!-- Question 4 -->
+            <fieldset class="quiz-item box">
+                <legend>4. What is the bottom margin for this declaration?</legend>
+                <pre><code>margin: 10px 5px 15px;</code></pre>
+                <label for="q4" class="visually-hidden">Bottom margin value</label>
+                <input type="number" id="q4" name="q4" placeholder="Enter value (e.g., 15)"
+                  required>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Quiz for Grading</button>
+
+        </form>
+    </main>
+</body>
+
+</html>
