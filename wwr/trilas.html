@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+      content="Contact White Water Rafting for bookings, questions, and support. Reach us by phone, email, or use our contact form." />
+    <meta name="author" content="Williams Olisebinum" />
+    <title>White Water Rafting | Contact Us</title>
+
+    <link rel="stylesheet" href="styles/contact.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="images/rapids-logo.jpeg" alt="Rafting Company Logo" />
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1>Contact Us</h1>
+
+        <!-- Company Info Section -->
+        <section class="company-info">
+            <h2>White Water Rafting Company</h2>
+            <address>
+                123 Main River Street<br />
+                Kolob, California<br />
+                <a href="tel:+19999999999">+1 999 999 9999</a><br />
+                <a href="mailto:info@whitewater.com">info@whitewater.com</a>
+            </address>
+        </section>
+
+        <!-- Google Map Embed -->
+        <section class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.670276739249!2d-113.60039548469267!3d37.298201279842654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c880d168b82fb9%3A0x42b9d4a4b0e6c1cc!2sKolob%20Canyon%20Road!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+              width="400" height="300" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form>
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name" placeholder="Your full name"
+                  required /><br /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" placeholder="your.email@example.com"
+                  required /><br /><br />
+
+                <fieldset>
+                    <legend>Message Purpose</legend>
+                    <input type="radio" id="general" name="purpose" value="General Inquiry"
+                      checked />
+                    <label for="general">General Inquiry</label><br />
+
+                    <input type="radio" id="reservation" name="purpose"
+                      value="Reservation Question" />
+                    <label for="reservation">Reservation Question</label><br />
+
+                    <input type="radio" id="suggestion" name="purpose" value="Website Suggestion" />
+                    <label for="suggestion">Website Suggestion</label><br />
+                </fieldset><br />
+
+                <label for="message">Message:</label><br />
+                <textarea id="message" name="message" placeholder="Type your message here" rows="5"
+                  required></textarea><br /><br />
+
+                <input type="checkbox" id="subscribe" name="subscribe" />
+                <label for="subscribe">Please subscribe me to the monthly
+                    newsletter</label><br /><br />
+
+                <button type="submit" class="submit-btn">Get in Touch!</button>
+            </form>
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="employees">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-list">
+
+                <figure>
+                    <img src="images/employee1.jpg" alt="Jane Smith, Customer Service Manager" />
+                    <figcaption>Jane Smith – Customer Service Manager</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee2.jpg" alt="John Doe, Trip Coordinator" />
+                    <figcaption>John Doe – Trip Coordinator</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee3.jpg" alt="Emily Johnson, Marketing Specialist" />
+                    <figcaption>Emily Johnson – Marketing Specialist</figcaption>
+                </figure>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 White Water Rafting Company | Ebinum Olise</p>
+
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook-square.svg" alt="Facebook" /></a>
+            <a href="#"><img src="images/linkedin-square.svg" alt="LinkedIn" /></a>
+            <a href="#"><img src="images/instagram-square.svg" alt="Instagram" /></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
